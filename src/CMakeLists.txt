@@ -1,5 +1,5 @@
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11")
-add_executable(netanomy-master main.cpp logger.hpp)
+add_executable(netanomy-master main.cpp logger.hpp logger.cpp config.cpp config.hpp zhelpers.hpp)
 
 include_directories(${CMAKE_CURRENT_SOURCE_DIR})
 
