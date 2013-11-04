@@ -19,8 +19,8 @@ publisher(zmq::context_t* context, std::shared_ptr<Logger> logger)
     {
         std::cin.ignore();
         zhelpers::s_sendmore (publisher, "Linux");
-        zhelpers::s_send (publisher, "Hallo");
-        logger->log("Publisher sent \"Hallo\" to Channel \"Linux\" ");
+        zhelpers::s_send (publisher, "0 Hallo Echo");
+        logger->log("Publisher: sent \"0 Hallo\" to Channel \"Linux\" ");
     }
 }
 
@@ -30,7 +30,7 @@ collector(zmq::context_t* context, std::shared_ptr<Logger> logger)
 {
     zmq::socket_t collector(*context, ZMQ_REP);    
     collector.bind("tcp://*:11001");
-    logger->log("Listening on tcp://*:11001");
+    logger->log("Collector: Listening on tcp://*:11001");
     zmq::message_t request;
 
     while (true)
@@ -38,6 +38,7 @@ collector(zmq::context_t* context, std::shared_ptr<Logger> logger)
         std::string result = zhelpers::s_recv(collector);
         // collector.recv(&request);
         logger->log(result);
+        zhelpers::s_send(collector, "ACK");
     }
 }
 
@@ -56,21 +57,8 @@ main(int argc, char** argv)
 
     // interacts with GUI and PUB+COLL
 
-    logger->log("joining publisher and collector");
+    logger->log("Main: joining publisher and collector");
     pub.join();
     col.join();
-
-        // while(true)
-        // {
-        //     zmq::message_t request;
-
-        //     socket.recv(&request);
-        //     std::cout << "Yay, got something. Press Key to reply..."  << std::endl;
-        //     std::cin.ignore();
-        //     zmq::message_t reply(5);
-        //     memcpy((void*) reply.data(), "1234", 4);
-        //     socket.send(reply);
-        //     std::cout << "hab was gesendet"  << std::endl;
-        // }
     return 0;
 }
