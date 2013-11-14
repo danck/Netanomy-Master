@@ -2,7 +2,7 @@
 
 # configure Travis CI build server for a C++11 build with Clang
 
-sudo apt-get --yes install clang-3.3 clang++-3.3; fi
+sudo apt-get --yes install clang-3.3 clang++-3.3
 sudo add-apt-repository --yes 'deb http://llvm.org/apt/precise/ llvm-toolchain-precise main'
 wget -O - http://llvm.org/apt/llvm-snapshot.gpg.key|sudo apt-key --yes add -
 sudo apt-get update
