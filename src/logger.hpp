@@ -1,3 +1,6 @@
+// Yavuz Arslan <yavuz.arslan@haw-hamburg.de>
+// Daniel Kirchner <daniel.kirchner1@haw-hamburg.de>
+
 #ifndef __NTY_LOGGER__
 #define __NTY_LOGGER__
 
@@ -12,7 +15,7 @@ namespace nty
     {
     public:
         Logger();
-        ~Logger() noexcept;
+        virtual ~Logger() noexcept;
 
         /*
         @brief  Logs the given string. UNRELIABLE.
