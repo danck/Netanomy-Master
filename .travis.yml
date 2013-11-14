@@ -23,6 +23,7 @@ before_script:
   - if [ $CXX == "clang++" ]; then $PROJECT_ROOT/travis_clang.sh; fi
   - ls -l /usr/bin
 
+  - find /usr -name clang
 
 # # Download and build ZeroMQ
 #   - mkdir -p libs/zeromq
