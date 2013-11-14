@@ -21,7 +21,7 @@ before_script:
 
 # Clang specific
   - if [ $CXX == "clang++" ]; then sudo apt-get --force-yes purge clang; fi
-  - if [ $CXX == "clang++" ]; then sudo add-apt-repository --yes 'deb http://llvm.org/apt/precise/ llvm-toolchain-precise main'; fi
+  - if [ $CXX == "clang++" ]; then sudo add-apt-repository --force-yes 'deb http://llvm.org/apt/precise/ llvm-toolchain-precise main'; fi
   - if [ $CXX == "clang++" ]; then sudo wget -O - http://llvm.org/apt/llvm-snapshot.gpg.key | sudo apt-key --yes add -; fi
   - if [ $CXX == "clang++" ]; then $PROJECT_ROOT/travis_clang.sh; fi
   - find /usr -name clang++
