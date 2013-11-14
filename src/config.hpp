@@ -35,19 +35,21 @@ either expressed or implied, of the FreeBSD Project.
 #ifndef __NTY_CONFIG__
 #define __NTY_CONFIG__
 
-namespace nty {
+namespace nty 
+{
 
-	class Config {
-	public:
-		Config();
+    class Config
+    {
+    public:
+        Config();
 
-		~Config() noexcept;
+        ~Config() noexcept;
 
-		/*
-		@brief	Determines the size of ZMQ's IO thread pool
-		*/
-		static int number_io_threads();
-	};
+        /*
+        @brief  Determines the size of ZMQ's IO thread pool
+        */
+        static int number_io_threads();
+    };
 }
 
 #endif
