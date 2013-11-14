@@ -7,5 +7,3 @@ sudo add-apt-repository --yes 'deb http://llvm.org/apt/precise/ llvm-toolchain-p
 sudo apt-get update
 sudo apt-get --force-yes install clang-3.4 clang-3.4-doc libclang-common-3.4-dev libclang-3.4-dev libclang1-3.4 libclang1-3.4-dbg libllvm-3.4-ocaml-dev libllvm3.4 libllvm3.4-dbg lldb-3.4 llvm-3.4 llvm-3.4-dev llvm-3.4-doc llvm-3.4-examples llvm-3.4-runtime cpp11-migrate-3.4 clang-format-3.4
 clang -v
-export CC=/usr/lib/llvm-3.4/include/clang
-expo
