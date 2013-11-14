@@ -1,7 +1,7 @@
 language: cpp
 
 compiler:
-  - clang
+  # - clang
   - gcc
 
 # blacklisted branches
@@ -10,6 +10,8 @@ compiler:
 #    - test
 
 before_script:
+  - export CXX=/usr/bin/g++-4.7
+  - export CC=/usr/bin/gcc-4.7
   - PROJECT_ROOT=`pwd`
   - PATH=$PATH:/home/travis/build/DanoPrat/Netanomy-Slave/lib
   - LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$PROJECT_ROOT
