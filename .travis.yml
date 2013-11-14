@@ -15,10 +15,10 @@ before_script:
   - LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$PROJECT_ROOT
 
 # GCC specific
-  - if [ $CXX == "gcc" ]; then $PROJECT_ROOT/travis_gcc.sh; fi
+  - if [ $CXX == "g++" ]; then $PROJECT_ROOT/travis_gcc.sh; fi
 
 # Clang specific
-  - if [ $CXX == "clang" ]; then $PROJECT_ROOT/travis_clang.sh; fi
+  - if [ $CXX == "clang++" ]; then $PROJECT_ROOT/travis_clang.sh; fi
 
 
 # # Download and build ZeroMQ
