@@ -18,6 +18,8 @@ before_script:
   - sudo apt-get --yes install g++-4.7 c++-4.7
   - which gcc
   - which g++
+  - ls -l /usr/bin/g++
+  - ls -l /usr/bin/gcc
 
 # # Download and build ZeroMQ
 #   - mkdir -p libs/zeromq
