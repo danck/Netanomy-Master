@@ -13,9 +13,9 @@ before_script:
   - PROJECT_ROOT=`pwd`
   - PATH=$PATH:/home/travis/build/DanoPrat/Netanomy-Slave/lib
   - LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$PROJECT_ROOT
-  - sudo add-apt-repository ppa:ubuntu-toolchain-r/test
-  - sudo apt-get update
-  - sudo apt-get install g++-4.7 c++-4.7
+  - sudo add-apt-repository --yes ppa:ubuntu-toolchain-r/test
+  - sudo apt-get --yes update
+  - sudo apt-get --yes install g++-4.7 c++-4.7
   - which gcc
   - which g++
 
