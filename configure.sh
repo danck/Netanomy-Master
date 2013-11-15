@@ -24,7 +24,7 @@ PROJECT_ROOT=`pwd`
 #
 if [ ! -d "lib/zeromq-4.0.1" ]; then
     echo "Installing ZeroMQ into project directory"
-    echo mkdir lib
+    mkdir lib
     cd lib
     wget http://download.zeromq.org/zeromq-4.0.1.tar.gz
     tar xzf zeromq-4.0.1.tar.gz
