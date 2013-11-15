@@ -48,6 +48,7 @@ if [ ! -d "lib/zeromq-4.0.1" ]; then
     ## Get C++ binding
     cd $PROJECT_ROOT/lib/zeromq/include
     git clone https://github.com/zeromq/cppzmq.git
+    mv $PROJECT_ROOT/lib/zeromq/include/cppzmq/zmq.hpp $PROJECT_ROOT/lib/zeromq/include/
 
     ## Check for success
     if [ `echo $?` != 0 ]; then
