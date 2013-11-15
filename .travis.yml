@@ -43,9 +43,11 @@ before_script:
 #   - git clone https://github.com/zeromq/cppzmq.git
 #   - cd ..
 
-# create makefile
-  - mkdir build
-  - cd build
-  - cmake -DZMQ_INCLUDE=$PROJECT_ROOT/lib/zeromq/include -DZMQ_LIBRARY=$PROJECT_ROOT/lib/zeromq/lib/libzmq.so ..
+# create 3rd party libraries and makefile
+#  - mkdir build
+#  - cd build
+#  - cmake -DZMQ_INCLUDE=$PROJECT_ROOT/lib/zeromq/include -DZMQ_LIBRARY=$PROJECT_ROOT/lib/zeromq/lib/libzmq.so ..
+   - ./configure.sh
+   - cd build
 
 script: make
