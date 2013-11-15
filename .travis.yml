@@ -47,7 +47,7 @@ before_script:
 #  - mkdir build
 #  - cd build
 #  - cmake -DZMQ_INCLUDE=$PROJECT_ROOT/lib/zeromq/include -DZMQ_LIBRARY=$PROJECT_ROOT/lib/zeromq/lib/libzmq.so ..
-   - ./configure.sh
-   - cd build
+  - ./configure.sh
+  - cd build
 
 script: make
