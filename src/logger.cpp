@@ -1,4 +1,5 @@
 #include <iostream>
+#include <string>
 #include "logger.hpp"
 
 using namespace nty;
@@ -10,15 +11,11 @@ Logger::~Logger() noexcept
 {}
 
 void
-Logger::log(std::string msg)
-{	
-	if (_mutex.try_lock())
-	{
+Logger::log(std::string msg) {
+	if (_mutex.try_lock()) {
 		std::cout << msg << std::endl;
 		_mutex.unlock();
-	} 
-	else
-	{
+    } else {
 		// failed to log
-	}
+    }
 }

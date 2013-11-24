@@ -32,19 +32,19 @@ either expressed or implied, of the FreeBSD Project.
 // Yavuz Arslan <yavuz.arslan@haw-hamburg.de>
 // Daniel Kirchner <daniel.kirchner1@haw-hamburg.de>
 
-#ifndef __NTY_LOGGER__
-#define __NTY_LOGGER__
+#ifndef SRC_LOGGER_HPP_
+#define SRC_LOGGER_HPP_
 
 #include <mutex>
+#include <string>
 
-namespace nty 
-{
+namespace nty {
+
     /*
     @brief  Trivial logger
     */
-    class Logger
-    {
-    public:
+    class Logger {
+     public:
         Logger();
         virtual ~Logger() noexcept;
 
@@ -57,9 +57,9 @@ namespace nty
         void
         log(std::string);
 
-    private:
+     private:
         std::mutex _mutex;
     };
-}
+} // namespace nty
 
-#endif
+#endif  // SRC_LOGGER_HPP_

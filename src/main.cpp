@@ -1,3 +1,14 @@
+/** @mainpage ProjectX: bla, bla, bla
+*   @par Description:
+*   - Point 1 bla, bla, bla
+*   - Point 2 bla, bla, bla
+*   - Point 3 bla, bla, bla
+*
+*   @par Next paragraph - more information:
+*    bla, bla, bla
+*    bla, bla, bla
+*/
+
 #include <iostream>
 #include <zmq.hpp>
 #include <memory>
@@ -9,7 +20,19 @@
 
 using namespace nty;
 
-// Broadcasts commands to slaves
+/**
+   Write description of function here.
+   The function should follow these comments.
+   Use of "brief" tag is optional. (no point to it)
+  
+   The function arguments listed with "param" will be compared 
+   to the declaration and verified.
+
+   @param[in]     _inArg1 Description of first function argument.
+   @param[out]    _outArg2 Description of second function argument.
+   @param[in,out] _inoutArg3 Description of third function argument.
+   @return Description of returned value.
+ */
 void 
 publisher(zmq::context_t* context, std::shared_ptr<Logger> logger)
 {

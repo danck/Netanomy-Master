@@ -1,9 +1,11 @@
+//Copyright [year] <Copyright Owner>
+
 #include "config.hpp"
 
 using namespace nty;
 
-Config::Config() {};
-Config::~Config() noexcept {};
+Config::Config() {}
+Config::~Config() noexcept {}
 
 int 
 Config::number_io_threads()
