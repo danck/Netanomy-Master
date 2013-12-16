@@ -40,7 +40,7 @@ either expressed or implied, of the FreeBSD Project.
 
 namespace nty {
 
-    /*
+    /**
     @brief  Trivial logger
     */
     class Logger {
@@ -48,7 +48,7 @@ namespace nty {
         Logger();
         virtual ~Logger() noexcept;
 
-        /*
+        /**
         @brief  Logs the given string. UNRELIABLE.
         WARNING: To avoid deadlocks this method doesn't take action if locked.
         Appends endline to argument.

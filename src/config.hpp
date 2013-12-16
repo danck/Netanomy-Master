@@ -37,7 +37,9 @@ either expressed or implied, of the FreeBSD Project.
 
 namespace nty 
 {
-
+    /**
+    @brief  Provides configuration info.
+    */
     class Config
     {
     public:
@@ -45,7 +47,7 @@ namespace nty
 
         ~Config() noexcept;
 
-        /*
+        /**
         @brief  Determines the size of ZMQ's IO thread pool
         */
         static int number_io_threads();
