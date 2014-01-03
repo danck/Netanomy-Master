@@ -1,0 +1,11 @@
+\begin{theindex}
+
+  \item {cpplint::CleansedLines}, \hyperpage{3}
+    \subitem {NumLines}, \hyperpage{3}
+
+  \indexspace
+
+  \item {NumLines}
+    \subitem {cpplint::CleansedLines}, \hyperpage{3}
+
+\end{theindex}
